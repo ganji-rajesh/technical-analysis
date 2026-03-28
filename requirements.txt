@@ -1,0 +1,47 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements.txt
+# Indian Stock Research Multi-Agent System
+#
+# Generated from: app.py, orchestrator.py, agents/utils.py,
+#                 agents/research_agent.py, agents/analysis_agent.py,
+#                 agents/writing_agent.py
+#
+# Install:  pip install -r requirements.txt
+# Python:   >= 3.10  (dataclasses, match-case, list[str] type hints used)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Data Fetching ─────────────────────────────────────────────────────────────
+# Used by: agents/research_agent.py
+# yfinance wraps Yahoo Finance — fetches OHLCV, fundamentals, news
+yfinance>=0.2.40
+
+# ── Numerical Computing ───────────────────────────────────────────────────────
+# Used by: agents/analysis_agent.py
+# RSI, moving averages, volatility, momentum calculations
+numpy>=1.24.0
+
+# ── Data Wrangling ────────────────────────────────────────────────────────────
+# Used by: yfinance (transitive dep) — also used directly for OHLCV DataFrames
+pandas>=2.0.0
+
+# ── HTTP Client ───────────────────────────────────────────────────────────────
+# Used by: yfinance (transitive dep)
+requests>=2.31.0
+
+# ── UI Framework ─────────────────────────────────────────────────────────────
+# Used by: app.py
+# Gradio 5.x required — uses gr.Blocks generator streaming (yield-based UI)
+# Do NOT downgrade to 4.x — streaming API is incompatible
+gradio>=5.0.0
+
+# ── Google Gemini SDK ─────────────────────────────────────────────────────────
+# Used by: agents/utils.py
+# Official Google Generative AI client for Gemini API calls.
+# Provides genai.Client with models.generate_content() for chat/completion.
+google-genai>=1.0.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Standard library modules used (no pip install needed):
+#   concurrent.futures, dataclasses, datetime, functools, json,
+#   logging, math, os, re, textwrap, time, typing
+# ─────────────────────────────────────────────────────────────────────────────
