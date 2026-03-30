@@ -1,0 +1,33 @@
+# ============================================================================
+# Technical Analysis Report Generator — Dependencies
+# ============================================================================
+#
+# IMPORTANT: TA-Lib requires a pre-installed C library before pip install.
+#   - Linux:   sudo apt-get install libta-lib-dev
+#   - macOS:   brew install ta-lib
+#   - Windows: Download the unofficial .whl from Christoph Gohlke's repository
+#              https://github.com/cgohlke/talib-build/
+#
+# Install all dependencies:
+#   pip install -r requirements.txt
+# ============================================================================
+
+# --- Data Acquisition ---
+yfinance>=0.2.40
+
+# --- Data Manipulation ---
+pandas>=2.0.0
+numpy>=1.26.0
+
+# --- Technical Analysis ---
+pandas-ta>=0.3.14b
+TA-Lib>=0.4.28
+
+# --- LLM Inference ---
+google-genai>=0.2.0
+
+# --- UI Framework ---
+gradio>=4.30.0
+
+# --- Charting ---
+plotly>=5.20.0
